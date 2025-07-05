@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejador Financeiro</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Planejador Financeiro</h1>
+
+        <div class="summary-cards">
+            <div class="card income-card">
+                <h2>Receitas</h2>
+                <p id="total-income">R$ 0.00</p>
+            </div>
+            <div class="card expenses-card">
+                <h2>Despesas</h2>
+                <p id="total-expenses">R$ 0.00</p>
+            </div>
+            <div class="card balance-card">
+                <h2>Saldo Atual</h2>
+                <p id="current-balance">R$ 0.00</p>
+            </div>
+        </div>
+
+        <div class="transaction-form">
+            <h2>Adicionar Transação</h2>
+            <input type="text" id="description" placeholder="Descrição da transação" required>
+            <input type="number" id="amount" placeholder="Valor (ex: 100.00 ou -50.00)" required>
+            <select id="type">
+                <option value="income">Receita</option>
+                <option value="expense">Despesa</option>
+            </select>
+            <button id="add-transaction">Adicionar</button>
+        </div>
+
+        <div class="transaction-list">
+            <h2>Histórico de Transações</h2>
+            <ul id="transactions">
+                </ul>
+            <p id="no-transactions-message">Nenhuma transação ainda.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          console.log('Service Worker registrado com sucesso:', reg);
+        })
+        .catch((err) => {
+          console.log('Falha no registro do Service Worker:', err);
+        });
+    });
+  }
+</script>
+</body>
+</html>
