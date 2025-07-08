@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #ece763;
+    background-color: #f8f23a;
     color: #000000;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ h1, h2 {
 }
 
 .card {
-    background-color: #fbff00;
+    background-color:rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -92,7 +92,7 @@ h1, h2 {
 .transaction-form button {
     width: 100%;
     padding: 12px;
-    background-color: #f7f300; /* Botão verde de adicionar */
+    background-color: #fffc41; /* Botão verde de adicionar */
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
@@ -102,7 +102,7 @@ h1, h2 {
 }
 
 .transaction-form button:hover {
-    background-color: #c2bf02;
+    background-color: #fffc4b;
 }
 
 /* Lista de Transações */
