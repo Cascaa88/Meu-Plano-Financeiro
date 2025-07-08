@@ -4,6 +4,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/css/style.css', // Se você tiver um arquivo CSS
+  '/js/script.js',
   '/js/main.js',   // Se você tiver um arquivo JavaScript
   '/images/icone-192x192.png',
   '/images/icone-512x512.png'
